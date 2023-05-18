@@ -14,7 +14,8 @@ const saveProduct = () =>{
   const obj ={
     title : props.product.title,
     release_date : props.product.release_date,
-    overview : props.product.overview
+    overview : props.product.overview,
+    comments :comment
   }
   
       axios.post(`http://localhost:7001/addMovie`, obj).then(res => console.log(res.data)).catch (err => {console.log(err)})
