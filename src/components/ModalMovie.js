@@ -13,12 +13,14 @@ export default function ModalMovie(props) {
 const saveProduct = () =>{
   const obj ={
     title : props.product.title,
-    release_date : props.product.release_date,
-    overview : props.product.overview,
+    movie_id : props.product.id,
+    // release_date : props.product.release_date,
+    // overview : props.product.overview,
+    poster_path : props.product.poster_path,
     comments :comment
   }
   
-      axios.post(`http://localhost:7001/addMovie`, obj).then(res => console.log(res.data)).catch (err => {console.log(err)})
+      axios.post(`https://movies-server-ur78.onrender.com/addMovie`, obj).then(res => console.log(res.data)).catch (err => {console.log(err)})
       setComment('') 
       props.setShow(false)
 
@@ -42,10 +44,10 @@ const saveProduct = () =>{
         <img src={poster_pathURL+props.product.poster_path} alt={props.product.title} width='100%' />
           
       <Form.Group  className="mb-3" controlId="comment">
-        <Form.Label>Comments</Form.Label>
+        <Form.Label>Comments: </Form.Label>
         <Form.Control as='textarea'  rows = {5} value={comment} onChange ={handleChange}/>
         <Form.Text className="text-muted">
-          We'll never share your comments with anyone else.
+        Type any comments you have
         </Form.Text>
       </Form.Group>
 
@@ -53,7 +55,7 @@ const saveProduct = () =>{
 
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>
-          <Button variant="primary" onClick={saveProduct}>Save changes</Button>
+          <Button variant="primary" onClick={saveProduct}>Add Movie</Button>
         </Modal.Footer>
       </Modal>
   );

@@ -4,8 +4,7 @@ import Movie from './Movie'
 
 
 export default function MovieList(props) {
-  console.log('1', props)
-  console.log('2',props.results)
+  // console.log('2',props.results)
   return (
     <div>
       <Row> 
