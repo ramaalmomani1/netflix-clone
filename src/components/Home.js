@@ -13,10 +13,8 @@ export default function Home() {
     const fetchData = async () => {
         try {
         
-          const res = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=4d25b873e73e136c52ed3c745b0e26c4`);
-          // ${process.env.REACT_APP_TRENDING_API}?api_key=${process.env.REACT_APP_TRENDING_KEY}
-        //   `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TRENDING_API}`
-          console.log(res.data.results);
+          const res = await axios.get(`https://movies-server-ur78.onrender.com/trending`);
+          // console.log(res.data.results);
           setResults(res.data.results)
         } catch(err) {
           console.log(err)

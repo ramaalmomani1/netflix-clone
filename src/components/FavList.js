@@ -4,17 +4,19 @@ import axios from 'axios';
 import Movie from './Movie';
 
 export default function FavList() {
-  const [products, setProducts] = useState([]);
 
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(`${process.env.REACT_APP_LOCAL_SERVER}/product`);
-      console.log(res.data.products);
-      setProducts(res.data.products)
-    } catch(err) {
-      console.log(err)
-    }
-  }
+    const [results, setResults] = useState([]);
+
+
+    const fetchData = async () => {
+        try {
+          const res = await axios.get(`https://movies-server-ur78.onrender.com/addMovie`);
+          console.log(res.data.results);
+          setResults(res.data.results)
+        } catch(err) {
+          console.log(err)
+        }
+      }
 
   useEffect(() => {
     fetchData();
@@ -24,8 +26,8 @@ export default function FavList() {
     <div>
       <Row> 
       {
-          products.length && (
-            products.map(item => 
+          results && (
+            results.map(item => 
               <Movie product={item} />
             )
           )
@@ -34,3 +36,4 @@ export default function FavList() {
     </div>
   )
 }
+
