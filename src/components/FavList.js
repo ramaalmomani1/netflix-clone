@@ -11,7 +11,6 @@ export default function FavList() {
   const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
   useEffect(() => {
-    // Fetch the favorite movies data from the server
     const serverURL = `https://netflex-movies.onrender.com/addMovie`;
     axios
       .get(serverURL)
@@ -22,14 +21,13 @@ export default function FavList() {
         console.log(error);
       });
   }, []);
-// console.log("movieeeeee",movies)
+
   const handleDelete = (id) => {
     console.log(id)
     const serverURL = `https://netflex-movies.onrender.com/addMovie/${id}`;
     axios
       .delete(serverURL)
       .then((response) => {
-        // Remove the deleted movie from the state
         setMovies((movies) => movies.filter((movie) => movie.id !== id));
       })
       .catch((error) => {
@@ -43,7 +41,6 @@ export default function FavList() {
   const poster_pathURL = "http://image.tmdb.org/t/p/w500/";
   return (
     <div>
-      <h1>Favorite List</h1>
       <div className="row">
         {movies.map((movie) => (
 
@@ -54,6 +51,7 @@ export default function FavList() {
                 <Card.Title>{movie.title}</Card.Title>
                 <Card.Text>
                   <br/>
+                  {movie.overview}
                   <br/>
                   Comments: {movie.comments}
                 </Card.Text>
