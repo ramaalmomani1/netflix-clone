@@ -20,7 +20,7 @@ const [movies, setMovies] = useState([])
     <Card style={{ width: '18rem' }} key={product.id}>
       <Card.Img variant="top" src={poster_pathURL+product.poster_path } />
       <Card.Body className='card'>
-        <Card.Title className='name'>{product.title}  {product.name}  {product.id}</Card.Title>
+        <Card.Title className='name'>{product.title}  {product.name}</Card.Title>
         <Card.Text className='data'>
           {product.overview}
            {product.comments}

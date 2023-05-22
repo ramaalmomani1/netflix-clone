@@ -15,7 +15,7 @@ const saveProduct = () =>{
     title : props.product.title,
     movie_id : props.product.id,
     // release_date : props.product.release_date,
-    // overview : props.product.overview,
+    overview : props.product.overview,
     poster_path : props.product.poster_path,
     comments :comment
   }
@@ -42,7 +42,7 @@ const saveProduct = () =>{
 
         <Modal.Body>
         <img src={poster_pathURL+props.product.poster_path} alt={props.product.title} width='100%' />
-          
+          {props.product.overview}
       <Form.Group  className="mb-3" controlId="comment">
         <Form.Label>Comments: </Form.Label>
         <Form.Control as='textarea'  rows = {5} value={comment} onChange ={handleChange}/>
