@@ -40,6 +40,7 @@ function ModalUpdate(props) {
         <Modal.Title>{props.movie.title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
+      {props.movie.overview}
         <Form.Group controlId="updatedComment">
           <Form.Label>Updated Comment</Form.Label>
           <Form.Control
