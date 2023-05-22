@@ -14,7 +14,6 @@ const saveProduct = () =>{
   const obj ={
     title : props.product.title,
     movie_id : props.product.id,
-    // release_date : props.product.release_date,
     overview : props.product.overview,
     poster_path : props.product.poster_path,
     comments :comment
