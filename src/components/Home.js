@@ -13,7 +13,7 @@ export default function Home() {
     const fetchData = async () => {
         try {
         
-          const res = await axios.get(`https://movies-server-ur78.onrender.com/trending`);
+          const res = await axios.get(`https://netflex-movies.onrender.com/trending`);
           // console.log(res.data.results);
           setResults(res.data.results)
         } catch(err) {
