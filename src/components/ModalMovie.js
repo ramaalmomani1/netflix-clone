@@ -20,7 +20,7 @@ const saveProduct = () =>{
     comments :comment
   }
   
-      axios.post(`https://movies-server-ur78.onrender.com/addMovie`, obj).then(res => console.log(res.data)).catch (err => {console.log(err)})
+      axios.post(`https://netflex-movies.onrender.com/addMovie`, obj).then(res => console.log(res.data)).catch (err => {console.log(err)})
       setComment('') 
       props.setShow(false)
 
