@@ -7,14 +7,12 @@ function ModalUpdate(props) {
   const [updatedComment, setUpdatedComment] = useState('');
   const handleUpdate = () => {
     const serverURL = `https://netflex-movies.onrender.com/addMovie/${props.movie.id}`;
-    //updateComment/:id
     const updatedMovieData = {
       comments: updatedComment
     };
     axios
       .put(serverURL, updatedMovieData)
       .then((response) => {
-        // Update the comments in the state
         const updatedMovie = { ...props.movie, comments: updatedComment };
         props.setMovies((movies) => {
           const updatedMovies = movies.map((movie) =>
@@ -44,10 +42,7 @@ function ModalUpdate(props) {
         <Form.Group controlId="updatedComment">
           <Form.Label>Updated Comment</Form.Label>
           <Form.Control
-            as="textarea"
-            rows={3}
-            value={updatedComment}
-            onChange={handleCommentChange}
+            as="textarea" rows={2} value={updatedComment} onChange={handleCommentChange}
           />
         </Form.Group>
       </Modal.Body>
