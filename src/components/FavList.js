@@ -50,9 +50,9 @@ export default function FavList() {
               <Card.Body>
                 <Card.Title>{movie.title}</Card.Title>
                 <Card.Text>
-                  <br/>
+                  <br />
                   {movie.overview}
-                  <br/>
+                  <br />
                   Comments: {movie.comments}
                 </Card.Text>
                 <Button

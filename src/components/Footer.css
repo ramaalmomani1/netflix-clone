@@ -1,0 +1,54 @@
+.Footer{
+
+    padding: 10px;
+ text-align: center;
+ background:#f4eff0;
+ font-size: 20px;
+}
+
+.SM{
+    display: flex;
+     justify-content:center; 
+    text-align: center;
+    flex-direction: row ; 
+    padding: 5px 10px;
+    width: auto; 
+    word-spacing: 10px;
+    
+    
+}
+
+.google{
+    color: black;
+    border: 2px solid red;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;  
+    text-align: center;  
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.facebook{
+    color: black;
+    border: 2px solid red;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;  
+    text-align: center;  
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.instagram{
+    color: black;
+    border: 2px solid red;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;  
+    text-align: center;  
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
