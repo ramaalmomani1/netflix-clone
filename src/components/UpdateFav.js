@@ -6,7 +6,7 @@ import { useState } from 'react';
 function ModalUpdate(props) {
   const [updatedComment, setUpdatedComment] = useState('');
   const handleUpdate = () => {
-    const serverURL = `https://netflex-movies.onrender.com/addMovie/${props.movie.movie_id}`;
+    const serverURL = `https://netflex-movies.onrender.com/addMovie/${props.movie.id}`;
     //updateComment/:id
     const updatedMovieData = {
       comments: updatedComment
@@ -18,7 +18,7 @@ function ModalUpdate(props) {
         const updatedMovie = { ...props.movie, comments: updatedComment };
         props.setMovies((movies) => {
           const updatedMovies = movies.map((movie) =>
-            movie.movie_id === updatedMovie.movie_id ? updatedMovie : movie
+            movie.id === updatedMovie.id ? updatedMovie : movie
           );
           return updatedMovies;
         });

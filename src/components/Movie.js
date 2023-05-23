@@ -3,12 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ModalMovie from './ModalMovie';
 import { useState } from 'react';
-import axios from 'axios';
 
 
-function Movie({product,handleShow, setSingleProduct, canEdit = false, updateProductState}) {
 
-const [movies, setMovies] = useState([])
+function Movie({product}) {
 
   const [show, setShow] = useState(false);
   const handleClick = () => {
